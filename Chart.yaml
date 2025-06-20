@@ -7,8 +7,16 @@ keywords:
 - docker
 - registry
 - harbor
-home: https://goharbor.io
-icon: https://raw.githubusercontent.com/goharbor/website/main/static/img/logos/harbor-icon-color.png
+maintainers:
+- email: yan-yw.wang@broadcom.com
+  name: Yan Wang
+- email: wenkai.yin@broadcom.com
+  name: Wenkai Yin
+- email: miner.yang@broadcom.com
+  name: Miner Yang
+- email: shengwen.yu@broadcom.com
+  name: Shengwen Yu
+name: harbor
 sources:
 - https://github.com/goharbor/harbor
 - https://github.com/goharbor/harbor-helm

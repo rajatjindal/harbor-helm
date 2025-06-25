@@ -58,6 +58,9 @@ spec:
 {{- end }}
 {{- end }}
       containers:
+      {{- if .Values.exporter.sidecars -}}
+      {{ toYaml .Values.exporter.sidecars | nindent 6 -}}
+      {{- end }}
       - name: exporter
         image: {{ .Values.exporter.image.repository }}:{{ .Values.exporter.image.tag }}
         imagePullPolicy: {{ .Values.imagePullPolicy }}

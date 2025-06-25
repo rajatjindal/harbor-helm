@@ -239,6 +239,9 @@ spec:
         secret:
           secretName: {{ template "harbor.internalTLS.core.secretName" . }}
       {{- end }}
+      {{- with .Values.core.extraVolumes }}
+      {{- toYaml . | nindent 6 }}
+      {{- end }}
       - name: psc
         emptyDir: {}
       {{- if .Values.caBundleSecretName }}

@@ -166,6 +166,9 @@ spec:
         secret:
           secretName: {{ template "harbor.internalTLS.jobservice.secretName" . }}
       {{- end }}
+      {{- with .Values.jobservice.extraVolumes }}
+      {{- toYaml . | nindent 6 }}
+      {{- end }}
       {{- if .Values.caBundleSecretName }}
 {{ include "harbor.caBundleVolume" . | indent 6 }}
       {{- end }}
